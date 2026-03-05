@@ -1,12 +1,15 @@
-function Input({ type, placeholder, value, onChange }) {
+function Input({ type, placeholder, value, onChange, label }) {
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      className="input-field"
-    />
+    <div className="input-wrapper">
+      {label && <label className="input-label">{label}</label>}
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        className="input-field"
+      />
+    </div>
   );
 }
 

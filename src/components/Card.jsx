@@ -1,5 +1,9 @@
-function Card({ children }) {
-  return <div className="card">{children}</div>;
+function Card({ children, style = {} }) {
+  return (
+    <div className="card" style={style}>
+      {children}
+    </div>
+  );
 }
 
 export default Card;

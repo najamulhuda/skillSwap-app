@@ -1,6 +1,10 @@
-function Button({ text, onClick }) {
+function Button({ text, onClick, variant = "primary", style = {} }) {
   return (
-    <button className="primary-btn" onClick={onClick}>
+    <button
+      className={`${variant}-btn`}
+      onClick={onClick}
+      style={style}
+    >
       {text}
     </button>
   );
